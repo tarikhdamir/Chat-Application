@@ -1,0 +1,26 @@
+﻿  chat_server.cpp
+C:\Users\tarik\Desktop\tarikhdamir\C++\testpqxx\chat_server.cpp(88,61): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\frame.hpp(834,13): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\common\md5.hpp(367,29): warning C4267: '+=': conversion from 'size_t' to 'websocketpp::md5::md5_word_t', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\sha1\sha1.hpp(176,24): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+  websocket_server.cpp
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\frame.hpp(834,13): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+  (compiling source file 'websocket_server.cpp')
+  
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\common\md5.hpp(367,29): warning C4267: '+=': conversion from 'size_t' to 'websocketpp::md5::md5_word_t', possible loss of data
+  (compiling source file 'websocket_server.cpp')
+  
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\sha1\sha1.hpp(176,24): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'websocket_server.cpp')
+  
+  Generating Code...
+  testpqxx.vcxproj -> C:\Users\tarik\Desktop\tarikhdamir\C++\testpqxx\x64\Debug\testpqxx.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

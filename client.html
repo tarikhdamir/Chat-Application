@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Client</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .chat-container {
+            width: 50%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+            .input-group input {
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                margin-top: 5px;
+            }
+
+            .input-group button {
+                padding: 10px;
+                font-size: 16px;
+                border: none;
+                border-radius: 4px;
+                background-color: #5cb85c;
+                color: #fff;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+                .input-group button:hover {
+                    background-color: #4cae4c;
+                }
+
+        #current-room {
+            text-align: center;
+            font-size: 18px;
+            margin: 10px 0;
+            color: #5cb85c;
+        }
+
+        #messages {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+            background: #fafafa;
+        }
+
+            #messages p {
+                margin: 0;
+                padding: 5px 10px;
+                border-bottom: 1px solid #eee;
+            }
+
+                #messages p:nth-child(odd) {
+                    background: #f9f9f9;
+                }
+
+                #messages p:last-child {
+                    border-bottom: none;
+                }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Chat Client</h1>
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="Enter your username">
+        </div>
+        <div class="input-group">
+            <label for="room">Room</label>
+            <input id="room" type="text" placeholder="Enter room name">
+        </div>
+        <div class="input-group">
+            <button onclick="connectToRoom()">Connect</button>
+        </div>
+        <div id="current-room"></div>
+        <div class="input-group">
+            <label for="message">Message</label>
+            <input id="message" type="text" placeholder="Enter your message">
+        </div>
+        <div class="input-group">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        <div id="messages"></div>
+    </div>
+
+    <script type="text/javascript">
+        var ws;
+
+        function connectToRoom() {
+            var username = document.getElementById("username").value;
+            var room = document.getElementById("room").value;
+
+            if (username === "" || room === "") {
+                alert("Username and room are required.");
+                return;
+            }
+
+            document.getElementById("messages").innerHTML = "";
+
+            if (ws) {
+                ws.close();
+            }
+
+            ws = new WebSocket("ws://localhost:9002");
+
+            ws.onopen = function () {
+                console.log("Connected to server");
+                ws.send("CONNECT:" + room); 
+
+                document.getElementById("current-room").innerText = "Current Room: " + room;
+            };
+
+            ws.onmessage = function (event) {
+                console.log("Received message: " + event.data);
+                var messagesDiv = document.getElementById("messages");
+                messagesDiv.innerHTML += "<p>" + event.data + "</p>";
+            };
+
+            ws.onclose = function () {
+                console.log("Disconnected from server");
+            };
+
+            ws.onerror = function (error) {
+                console.log("WebSocket Error: " + error);
+            };
+        }
+
+        function sendMessage() {
+            var username = document.getElementById("username").value;
+            var room = document.getElementById("room").value;
+            var message = document.getElementById("message").value;
+
+            if (username === "" || room === "" || message === "") {
+                alert("Username, room, and message are required.");
+                return;
+            }
+
+            var formattedMessage = username + ":" + room + ":" + message;
+            console.log("Sending message: " + formattedMessage);
+            ws.send(formattedMessage);
+        }
+    </script>
+</body>
+</html>

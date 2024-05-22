@@ -1,0 +1,74 @@
+﻿  chat_server.cpp
+C:\Users\tarik\Desktop\tarikhdamir\C++\testpqxx\chat_server.cpp(89,61): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\frame.hpp(834,13): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\common\md5.hpp(367,29): warning C4267: '+=': conversion from 'size_t' to 'websocketpp::md5::md5_word_t', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\sha1\sha1.hpp(176,24): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+  websocket_server.cpp
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\frame.hpp(834,13): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+  (compiling source file 'websocket_server.cpp')
+  
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\common\md5.hpp(367,29): warning C4267: '+=': conversion from 'size_t' to 'websocketpp::md5::md5_word_t', possible loss of data
+  (compiling source file 'websocket_server.cpp')
+  
+C:\Users\tarik\vcpkg\installed\x64-windows\include\websocketpp\sha1\sha1.hpp(176,24): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'websocket_server.cpp')
+  
+pqxx.lib(strconv.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in chat_server.obj
+pqxx.lib(strconv.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in chat_server.obj
+pqxx.lib(version.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in chat_server.obj
+pqxx.lib(version.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in chat_server.obj
+pqxx.lib(connection.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in chat_server.obj
+pqxx.lib(connection.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in chat_server.obj
+pqxx.lib(except.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in chat_server.obj
+pqxx.lib(except.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in chat_server.obj
+pqxx.lib(encodings.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in chat_server.obj
+pqxx.lib(encodings.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in chat_server.obj
+pqxx.lib(util.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in chat_server.obj
+pqxx.lib(util.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in chat_server.obj
+pqxx.lib(result.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in chat_server.obj
+pqxx.lib(result.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in chat_server.obj
+pqxx.lib(wait.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in chat_server.obj
+pqxx.lib(wait.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in chat_server.obj
+pqxx.lib(errorhandler.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in chat_server.obj
+pqxx.lib(errorhandler.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in chat_server.obj
+pqxx.lib(field.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in chat_server.obj
+pqxx.lib(field.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in chat_server.obj
+pqxx.lib(row.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in chat_server.obj
+pqxx.lib(row.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in chat_server.obj
+LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+pqxx.lib(row.obj) : error LNK2001: unresolved external symbol __imp__invalid_parameter
+pqxx.lib(util.obj) : error LNK2001: unresolved external symbol __imp__invalid_parameter
+pqxx.lib(result.obj) : error LNK2001: unresolved external symbol __imp__invalid_parameter
+pqxx.lib(errorhandler.obj) : error LNK2001: unresolved external symbol __imp__invalid_parameter
+pqxx.lib(field.obj) : error LNK2001: unresolved external symbol __imp__invalid_parameter
+pqxx.lib(strconv.obj) : error LNK2001: unresolved external symbol __imp__invalid_parameter
+pqxx.lib(connection.obj) : error LNK2001: unresolved external symbol __imp__invalid_parameter
+pqxx.lib(except.obj) : error LNK2001: unresolved external symbol __imp__invalid_parameter
+pqxx.lib(encodings.obj) : error LNK2001: unresolved external symbol __imp__invalid_parameter
+pqxx.lib(field.obj) : error LNK2001: unresolved external symbol __imp__calloc_dbg
+pqxx.lib(row.obj) : error LNK2001: unresolved external symbol __imp__calloc_dbg
+pqxx.lib(util.obj) : error LNK2001: unresolved external symbol __imp__calloc_dbg
+pqxx.lib(result.obj) : error LNK2001: unresolved external symbol __imp__calloc_dbg
+pqxx.lib(wait.obj) : error LNK2001: unresolved external symbol __imp__calloc_dbg
+pqxx.lib(errorhandler.obj) : error LNK2001: unresolved external symbol __imp__calloc_dbg
+pqxx.lib(strconv.obj) : error LNK2001: unresolved external symbol __imp__calloc_dbg
+pqxx.lib(connection.obj) : error LNK2001: unresolved external symbol __imp__calloc_dbg
+pqxx.lib(except.obj) : error LNK2001: unresolved external symbol __imp__calloc_dbg
+pqxx.lib(encodings.obj) : error LNK2001: unresolved external symbol __imp__calloc_dbg
+pqxx.lib(row.obj) : error LNK2001: unresolved external symbol __imp__CrtDbgReport
+pqxx.lib(util.obj) : error LNK2001: unresolved external symbol __imp__CrtDbgReport
+pqxx.lib(result.obj) : error LNK2001: unresolved external symbol __imp__CrtDbgReport
+pqxx.lib(errorhandler.obj) : error LNK2001: unresolved external symbol __imp__CrtDbgReport
+pqxx.lib(field.obj) : error LNK2001: unresolved external symbol __imp__CrtDbgReport
+pqxx.lib(strconv.obj) : error LNK2001: unresolved external symbol __imp__CrtDbgReport
+pqxx.lib(connection.obj) : error LNK2001: unresolved external symbol __imp__CrtDbgReport
+pqxx.lib(except.obj) : error LNK2001: unresolved external symbol __imp__CrtDbgReport
+pqxx.lib(encodings.obj) : error LNK2001: unresolved external symbol __imp__CrtDbgReport
+C:\Users\tarik\Desktop\tarikhdamir\C++\testpqxx\x64\Release\testpqxx.exe : fatal error LNK1120: 3 unresolved externals
