@@ -10,7 +10,7 @@ void clearDatabase(pqxx::connection& conn) {
 
 int main() {
     try {
-        pqxx::connection conn("dbname=chatapp user=postgres password=jbacj123 hostaddr=127.0.0.1 port=5432");
+        pqxx::connection conn("dbname=chatapp user=postgres password=****** hostaddr=127.0.0.1 port=5432");
 
         if (conn.is_open()) {
             std::cout << "Connected to database successfully." << std::endl;
